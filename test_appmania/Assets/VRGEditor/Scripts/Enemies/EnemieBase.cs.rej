@@ -1,0 +1,20 @@
+diff a/Assets/Scripts/Enemies/EnemieBase.cs b/Assets/Scripts/Enemies/EnemieBase.cs	(rejected hunks)
+@@ -29,15 +29,16 @@
+     public float AttackSpeed;
+     public float AttackRadius;
+     public float AttackDistance;
++	public AttackType attackType;
+ 
+     public SpecialAbilities[] Abilities;
+-
+-    private EnemyAnimation _animationCompnent;
++    
+     public Actions State = Actions.IDLE;
+     public UnityAction Behavior = () => { };
+ 
+     private HitController _hitController;
+     private NavMeshAgent _agent;
++	private EnemyAnimation _animationCompnent;
+ 
+     #region Network Fields
+     protected Vector3 CorrectPlayerPos = Vector3.zero;
